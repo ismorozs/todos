@@ -1,0 +1,101 @@
+.imagePreview {
+  width: 100px;
+  height: 100px;
+}
+
+.imagePreviewContainer {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+}
+
+.imageButton {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid black;
+  height: 29px;
+  width: 29px;
+  cursor: pointer;
+}
+
+.removeImageButton {
+  top: 2px;
+  right: 2px;
+}
+
+.addImageButton {
+  bottom: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border: none;
+}
+
+.addImageButton span {
+  border: 7px solid black;
+  border-radius: 18px;
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
+
+.removeImageButton::before, .removeImageButton::after, .addImageButton::before, .addImageButton::after {
+  width: 22px;
+  height: 4px;
+  background-color: black;
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 3px;
+}
+
+.addImageButton::before, .addImageButton::after {
+  width: 40px;
+  height: 7px;
+  top: 48px;
+  left: 31px;
+}
+
+.removeImageButton::before {
+  transform: rotate(-45deg)
+}
+
+.removeImageButton::after {
+  transform: rotate(45deg)
+}
+
+.removeImageButton:hover::after, .removeImageButton:hover::before {
+  background: darkred;
+}
+
+.addImageButton::after {
+  transform: rotate(90deg)
+}
+
+.addImageButton:hover span {
+  border-color: darkgreen;
+}
+
+.addImageButton:hover::after, .addImageButton:hover::before {
+  background: darkgreen;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+  margin-left: 7px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  cursor: pointer;
+  padding-bottom: 0;
+}

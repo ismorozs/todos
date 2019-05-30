@@ -1,0 +1,49 @@
+.TodoList {
+  list-style: none;
+  margin-top: 0px;
+  padding: 0;
+}
+
+.TodoItem {
+  margin-bottom: 15px;
+}
+
+.TodoHeader {
+  background-color: rgba(0, 120, 209, 0.1);
+  font-weight: 500;
+}
+
+.TodoBody {
+  padding-bottom: 65px;
+  min-height: 185px;
+  position: relative;
+}
+
+.todoText {
+  margin-left: 175px;
+}
+
+.cardImage {
+  float: left;
+}
+
+.checkboxContainer {
+  margin: 0;
+  display: inline-block;
+}
+
+.statusLabel {
+  padding-bottom: 0;
+}
+
+.editControls {
+  position: absolute;
+  bottom: 9px;
+  right: 20px;
+}
+
+.editButton {
+  color: rgba(0, 120, 209, 1);
+  cursor: pointer;
+  margin-right: 15px;
+}

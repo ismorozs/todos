@@ -1,0 +1,52 @@
+.SortPanel {
+  margin-top: 20px;
+}
+
+.sortList {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.sortItem {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 18px;
+  color: #0078d1;
+  cursor: pointer;
+}
+
+.active {
+  padding-right: 30px;
+  position: relative;
+}
+
+.active::after, .active::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #0078d1;
+  width: 14px;
+  height: 5px;
+  top: 12px;
+}
+
+.sortItemasc::after {
+  right: 3px;
+  transform: rotate(45deg);
+}
+
+.sortItemasc::before {
+  right: 10px;
+  transform: rotate(-45deg);
+}
+
+.sortItemdesc::after {
+  right: 3px;
+  transform: rotate(-45deg);
+}
+
+.sortItemdesc::before {
+  right: 10px;
+  transform: rotate(45deg);
+}

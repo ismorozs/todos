@@ -1,0 +1,17 @@
+:global(.redish) {
+  color: #dc3545 !important;
+}
+
+:global(.greenish) {
+  color: #04BD17 !important;
+}
+
+:global(.outOfSight) {
+  position: absolute;
+  top: -100vh;
+  left: -100vh;
+}
+
+:global(.hidden) {
+  display: none;
+}

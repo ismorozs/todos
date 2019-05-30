@@ -1,0 +1,21 @@
+.heading {
+  float: left;
+}
+
+.navigation {
+  padding-top: 8px;
+}
+
+.username {
+  margin-right: 15px;
+  padding-top: 3px;
+  font-size: 20px;
+}
+
+.navigationButton {
+  margin-right: 5px;
+}
+
+.navigationButton:last-child {
+  margin-right: 0;
+}
