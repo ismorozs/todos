@@ -16,4 +16,8 @@ To build production ready files run
 ```
 ./build.sh
 ```
-which will generate ```index.html``` file and compressed js and css files for the client in ```./dist``` folder and ```server.js``` file for the server at the root folder.
+which will generate ```index.html``` file, and compressed ```js``` and ```css``` files in ```./dist``` folder for the client, and ```server.js``` file at the root folder for the server.
+
+---
+Only special user ```admin``` is allowed to edit and remove todos. To become ```admin``` enter:
+```admin``` as "Name" and ```123``` as "Password" in the log in form at the upper right corner of the app.
