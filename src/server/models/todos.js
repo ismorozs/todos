@@ -6,6 +6,7 @@ const { validateFields } = require('../helpers/index');
 const { TodoScheme } = require ('../../dataSchemes/Todo');
 
 const todos = [];
+let lastId = 0;
 
 module.exports = {
   generate: generateTodos,
@@ -27,6 +28,7 @@ function generateTodos (num) {
     const status = 0;
     const image = settings.RANDOM_IMAGE_URL + i;
     todos.push({ id, username, email, text, status, image });
+    lastId = i;
   }
 }
 
@@ -49,7 +51,7 @@ function getTodos (params) {
 
 function createTodo (params) {
   const fields = validateTodoFields(params);
-  const id = todos.length;
+  const id = ++lastId;
   const todo = { ...fields, id, status: TodoScheme.status.initialValue };
   todos.push(todo);
   return todo;

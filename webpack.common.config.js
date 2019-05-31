@@ -5,7 +5,7 @@ const settings = require('./settings');
 
 module.exports = (env = {}, argv) => {
   const GLOBAL__PORT = env.PORT || settings.DEFAULT_PORT;
-  const GLOBAL__API_URL = `'${env.API_URL || ('http://localhost:' + GLOBAL__PORT + '/todos')}'`;
+  const GLOBAL__API_URL = `'${env.API_URL || '/todos'}'`;
   const GLOBAL__VERSION_NUMBER = env.VERSION_NUMBER || settings.DEFAULT_VERSION_NUMBER;
   
   return {

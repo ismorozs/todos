@@ -38,7 +38,7 @@ export const updateTodoForm = (updateObj) => {
 export const createTodo = (params) => {
   return (dispatch) => {
     Todos.create(params)
-      .then(dispatch(renderTodos()))
+      .then(() => dispatch(renderTodos()))
       .catch((e) => handleError(e, dispatch));
   }
 }
@@ -62,7 +62,7 @@ export const editTodo = (id, params) => {
 export const removeTodo = (id) => {
   return (dispatch) => {
     Todos.remove(id)
-      .then(dispatch(renderTodos()))
+      .then(() => dispatch(renderTodos()))
       .catch((e) => handleError(e, dispatch));
   }
 }

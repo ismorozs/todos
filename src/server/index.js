@@ -9,7 +9,7 @@ import * as actionTypes from '../client/store/actions/actionTypes';
 import renderPage from './helpers/pageRenderer';
 import createStore from '../client/store/index';
 
-const port = args.port || GLOBAL__PORT;
+const port = process.env.PORT || args.port || GLOBAL__PORT;
 
 Todos.generate( +args.generateTodos || settings.DEFAULT_GENERATED_TODOS_NUMBER );
 
@@ -27,6 +27,8 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
+
+app.set('etag', false);
 
 require('./routes/todos')(app);
 

@@ -65,13 +65,15 @@ function generateSignature (paramsObj) {
 }
 
 function handleResponse (response) {
-  if (response.data.status !== statuses.OK) {
-    const error = new Error(response.data.status);
-    error.details = response.data.message;
-    throw error;
-  }
-
-  return response.data.message;
+  return new Promise ((res, rej) => {
+    if (response.data.status !== statuses.OK) {
+      const error = new Error(response.data.status);
+      error.details = response.data.message;
+      rej(error);
+    }
+  
+    res(response.data.message);
+  });
 }
 
 const Todo = {
@@ -81,7 +83,7 @@ const Todo = {
   remove: removeTodo,
 };
 
-if (GLOBAL__API_URL.indexOf('localhost') === -1) {
+if (GLOBAL__API_URL.indexOf('/') !== 0) {
   modifyTodoModel(Todo);
 }
 
